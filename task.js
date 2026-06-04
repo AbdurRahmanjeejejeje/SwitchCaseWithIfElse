@@ -31,10 +31,10 @@
 
 // Q-02
 
-// let age = 80;
-// let salary = 45000;
-// let experience = 8;
-// let CIBIL = 600;
+// let age = 40;
+// let salary = 55000;
+// let experience = 1;
+// let CIBIL = 1000;
 
 // if (age >= 21 && age <= 60) {
 
@@ -71,40 +71,65 @@
 
 // Q-03
 
-// let premium_customer = true;
-// let premium_amount = 20000;
-// let premium_discount = 0;
-
-// let regular_customer = true;
-// let regular_amount = 11000;
-// let regular_discount = 0;
-
-// let coupon = 0;
+let customer ="Premium_Customer"
+let amount = 40000;
+let discount = 0;
+let coupon = 500;
+let beforeAmount=0;
+let Final_amount = 0;
 
 
-// if( premium_customer===true && premium_amount>=10000){
-//     premium_discount = premium_amount/100*20;
-//     let Pre_F_amount = premium_amount-(premium_discount+coupon);
-//     console.log(Pre_F_amount)
+
+if( customer==="Premium_Customer" && amount>=10000){
+    discount = amount/100*20;
+    beforeAmount = discount+coupon;
+    Final_amount = amount-beforeAmount;
+    console.log(Final_amount);
+    
+    
+}
+
+else if(customer==="Premium_Customer"){
+    discount = amount/100*10;
+    Final_amount = amount-discount;
+    console.log(Final_amount);
+   
+}
+
+else if( customer==="Regular_Customer" && amount>=10000){
+    discount = amount/100*10;
+    beforeAmount = discount+coupon;
+    Final_amount = amount-beforeAmount;
+    console.log(Final_amount);
+
+}
+
+else{
+    Final_amount = amount;
+console.log(Final_amount);
+}
+
+
+// Q-03
+
+// function calculateDiscount(customerType, amount, coupon) {
+//     let discount = 0;
+
+//     if (customerType === "premium") {
+//         discount = amount >= 10000 ? amount * 20 / 100 : amount * 10 / 100;
+//     } 
+    
+//     else if (customerType === "regular") {
+//         discount = amount >= 10000 ? amount * 10 / 100 : 0;
+//     }
+
+//     return amount - (discount + coupon);
 // }
 
-// else if(premium_customer===true){
-//     premium_discount = premium_amount/100*10;
-//     F_amount = premium_amount-premium_discount
-//     console.log(F_amount)
-// }
+// let finalAmount = calculateDiscount("premium", 20000, 0);
 
+// console.log(finalAmount);
 
-// if( regular_customer===true && regular_amount>=10000){
-//     regular_discount = regular_amount/100*10;
-//     let Reg_F_amount = regular_amount - (regular_discount+coupon);
-//     console.log(Reg_F_amount);
-
-// }
-
-// else{
-//     console.log(regular_amount);
-// }
 
 
 // Q-04
@@ -141,27 +166,39 @@
 
 // Q-05
 
-// let stock = 70;
-// let reorderlevel = 20;
-// let expiry = 80;
+// let stock = 80;
+// let reorderlevel = 40;
+// let expiry = 60;
+
 // if(stock<=0){
 //     console.log(`Out of Stock`);
 // }
 
-// else if(stock<reorderlevel && expiry<=30){
-//     console.log(`Low stock and near expiry date`);
+// else if(stock<=reorderlevel && expiry<=30){
+//     console.log(`Low stock and near to expiry`);
+// }
+
+// else if(expiry<=30){
+//     console.log(`near to expiry date`);
+
 // }
 
 // else if(stock<=reorderlevel){
 //     console.log(`Low stock`);
+
 // }
 
-// else if(stock>=reorderlevel && expiry<=30){
-//     console.log(`In Stock & Near Expiry`);
+// else if(stock>=reorderlevel && expiry>=30){
+//     console.log(`in stock and do not close to expiry date`);
 // }
 
-// else{
-//     console.log(`Stock Available`);
+
+// else if(stock>reorderlevel){
+//     console.log(`In Stock `);
+// }
+
+// else if(expiry>=30){
+//     console.log(`do not close to expiry date`);
 // }
 
 
